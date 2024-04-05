@@ -1,7 +1,43 @@
-import { PiBrowserDuotone, PiPaintBrushDuotone, PiPenDuotone } from "react-icons/pi";
+import {
+  PiBrowserDuotone,
+  PiEnvelopeDuotone,
+  PiGithubLogoDuotone,
+  PiLinkedinLogoDuotone,
+  PiPaintBrushDuotone,
+  PiPenDuotone,
+  PiVideoCameraDuotone,
+} from "react-icons/pi";
+import { RiTwitterXLine } from "react-icons/ri";
 import { RxShadowNone } from "react-icons/rx";
+export const iconLinks = [
+  {
+    href: "https://linkedin.com/in/viditkhandelwal",
+    icon: <PiLinkedinLogoDuotone />,
+    ariaLabel: "LinkedIn",
+  },
+  {
+    href: "https://github.com/csvidit",
+    icon: <PiGithubLogoDuotone />,
+    ariaLabel: "GitHub",
+  },
+  {
+    href: "https://twitter.com/csvidit",
+    icon: <RiTwitterXLine />,
+    ariaLabel: "Twitter",
+  },
+  {
+    href: "https://cal.com/viditkhandelwal",
+    icon: <PiVideoCameraDuotone />,
+    ariaLabel: "Calendly",
+  },
+  {
+    href: "mailto:vidit@viditkhandelwal.com",
+    icon: <PiEnvelopeDuotone />,
+    ariaLabel: "Email",
+  },
+];
 
-export const list = [
+export const listLinks = [
   {
     label: "Engineering Blog",
     href: "https://v-k.pw/7pvHzhtOHy",
