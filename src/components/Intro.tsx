@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BsDot } from "react-icons/bs";
-import { PiArrowUpRightBold, PiDotsNine, PiDotsNineBold } from "react-icons/pi";
+import { PiArrowUpRightBold } from "react-icons/pi";
 
 const Intro = () => {
   return (
