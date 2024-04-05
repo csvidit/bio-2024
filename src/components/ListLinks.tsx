@@ -5,7 +5,7 @@ const ListLinks = () => {
   return (
     <>
       {listLinks.map((item, index) => {
-        <ListLink key={`listLink-${index}`} href={item.href} icon={item.icon}>
+        return <ListLink key={`listLink-${index}`} href={item.href} icon={item.icon}>
           {item.label}
         </ListLink>;
       })}
