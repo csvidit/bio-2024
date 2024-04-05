@@ -15,7 +15,7 @@ const ListLink = (props: {
       role="link"
       tabIndex={0}
       href={props.href}
-      className="group p-4 col-span-4 flex flex-row justify-between items-center bg-gray-200 rounded-lg transition-all duration-200 ease-in-out hover:ring hover:ring-gray-300 hover:shadow-lg hover:shadow-gray-300 focus:ring focus:ring-gray-300 focus:shadow-lg focus:shadow-gray-300"
+      className="group p-4 col-span-4 flex flex-row justify-between items-center bg-gray-50 rounded-lg transition-all duration-200 ease-in-out hover:ring hover:ring-gray-300 hover:shadow-lg hover:shadow-gray-300 focus:ring focus:ring-gray-300 focus:shadow-lg focus:shadow-gray-300"
     >
       <div className="flex flex-row space-x-2 items-center">
         <div className="lg:text-lg text-gray-500 group-hover:text-gray-700 group-focus:text-gray-700 transition-all duration-200 ease-in-out">{props.icon}</div>
