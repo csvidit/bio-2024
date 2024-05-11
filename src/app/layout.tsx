@@ -1,6 +1,7 @@
 import MainContainer from "@/components/MainContainer";
 import "./globals.css";
 import localFont from "next/font/local";
+import { DM_Sans, IBM_Plex_Mono, Oxygen, Syne } from "next/font/google";
 
 export const metadata = {
   title: "Vidit Khandelwal Links",
@@ -59,6 +60,8 @@ const inter4 = localFont({
   display: "swap",
 });
 
+const ibm_mono = DM_Sans({subsets: ["latin"], weight: ["400", "500", "600", "700"]});
+
 export default function RootLayout({
   children,
 }: {
@@ -66,10 +69,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter4.className}>
-        <MainContainer>
-          {children}
-        </MainContainer>
+      <body className={ibm_mono.className}>
+        <MainContainer>{children}</MainContainer>
       </body>
     </html>
   );

@@ -16,13 +16,13 @@ const ListLink = (props: {
       role="link"
       tabIndex={0}
       href={props.href}
-      className="w-full h-fit group p-4 col-span-4 flex flex-row justify-between items-center bg-gray-50 rounded-lg transition-all duration-200 ease-in-out hover:bg-gray-950 hover:scale-[101%] hover:ring hover:ring-gray-500 hover:shadow-lg hover:shadow-gray-500 focus:ring focus:ring-gray-500 focus:shadow-lg focus:shadow-gray-500"
+      className="w-full h-fit group p-4 col-span-4 flex flex-row justify-between items-center bg-gray-50 rounded-lg transition-all duration-200 ease-in-out hover:bg-olive hover:scale-[101%] hover:ring hover:ring-sensaimidori hover:shadow-lg hover:shadow-gray-500 focus:ring focus:ring-sensaimidori focus:shadow-lg focus:shadow-gray-500"
     >
       <div className="flex flex-row space-x-2 items-center *:group-hover:text-gray-50 *:group-focus:text-gray-50 *:transition-all *:duration-200 *:ease-in-out">
-        <div className="lg:text-lg text-gray-500 transition-all duration-200 ease-in-out">
+        <div className="lg:text-lg text-cassiopeia transition-all duration-200 ease-in-out">
           {props.icon}
         </div>
-        <p className="lg:text-lg ">{props.children}</p>
+        <p className="lg:text-lg">{props.children}</p>
       </div>
       <div>
         <div className="lg:text-lg group-hover:rotate-45 transition-all duration-200 ease-in-out group-hover:text-gray-50">
