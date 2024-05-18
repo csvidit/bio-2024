@@ -1,9 +1,12 @@
 import {
+  PiBrowser,
   PiBrowserDuotone,
   PiEnvelopeDuotone,
   PiGithubLogoDuotone,
   PiLinkedinLogoDuotone,
+  PiPaintBrushBroad,
   PiPaintBrushDuotone,
+  PiPen,
   PiPenDuotone,
   PiVideoCameraDuotone,
 } from "react-icons/pi";
@@ -21,9 +24,9 @@ export const iconLinks = [
     ariaLabel: "GitHub",
   },
   {
-    href: "https://twitter.com/csvidit",
+    href: "https://x.com/csvidit",
     icon: <RiTwitterXLine />,
-    ariaLabel: "Twitter",
+    ariaLabel: "Twitter/x",
   },
   {
     href: "https://cal.com/viditkhandelwal",
@@ -41,17 +44,17 @@ export const listLinks = [
   {
     label: "Engineering Blog",
     href: "https://v-k.pw/7pvHzhtOHy",
-    icon: <PiPenDuotone />,
+    icon: <PiPen />,
   },
   {
     label: "Essential UI libraries for React",
     href: "https://v-k.pw/1cTmyEzt76",
-    icon: <PiPenDuotone />,
+    icon: <PiPen />,
   },
   {
     label: "Snippetopia",
     href: "https://snippetopia.xyz",
-    icon: <PiBrowserDuotone />,
+    icon: <PiBrowser />,
   },
   {
     label: "Lume Wallpapers",
@@ -61,6 +64,6 @@ export const listLinks = [
   {
     label: "Vidit Khandelwal Studio",
     href: "https://viditkhandelwal.com/studio",
-    icon: <PiPaintBrushDuotone />,
+    icon: <PiPaintBrushBroad />,
   },
 ];
