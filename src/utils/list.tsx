@@ -29,7 +29,7 @@ export const iconLinks = [
     ariaLabel: "Twitter/x",
   },
   {
-    href: "https://cal.com/viditkhandelwal",
+    href: "https://calendly.com/viditkhandelwal",
     icon: <PiVideoCameraDuotone />,
     ariaLabel: "Calendly",
   },
