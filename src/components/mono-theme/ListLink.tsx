@@ -12,7 +12,7 @@ const ListLink = (props: {
       role="link"
       tabIndex={0}
       href={props.href}
-      className="group *:uppercase w-full h-fit group p-4 col-span-4 flex flex-row justify-between items-center bg-arapawa-950 hover:bg-arapawa-900 transition-all duration-200 ease-in-out"
+      className="relative group *:uppercase w-full h-fit group p-4 col-span-4 flex flex-row justify-between items-center bg-arapawa-950 hover:bg-arapawa-950 transition-all duration-200 ease-in-out"
     >
       <div className="ml-0 group-hover:ml-4 group-focus:ml-4 flex flex-row gap-x-2 items-center *:text-ice-300 *:group-hover:text-ice-200 *:group-focus:text-ice-200 transition-all duration-200 ease-in-out *:transition-all *:duration-200 *:ease-in-out">
         <div className="transition-all duration-200 ease-in-out">
@@ -30,6 +30,7 @@ const ListLink = (props: {
           </span> */}
         </div>
       </div>
+      <div className="absolute inset-0 w-[2px] h-0 group-hover:h-full group-focus:h-full bg-ice-300 transition-all duration-200 ease-in-out"></div>
     </Link>
   );
 };
