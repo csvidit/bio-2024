@@ -1,9 +1,13 @@
 import Link from "next/link";
 
-const IconLink = (props: { ariaLabel: string; href: string; children: React.ReactNode }) => {
+const IconLink = (props: {
+  ariaLabel: string;
+  href: string;
+  children: React.ReactNode;
+}) => {
   return (
     <Link
-    aria-label={props.ariaLabel}
+      aria-label={props.ariaLabel}
       className="flex flex-row w-fit h-fit bg-gray-200 p-2 text-gray-500 rounded-full shadow-inner shadow-gray-300 transition-all hover:shadow-gray-400 lg:text-xl"
       href={props.href}
     >
@@ -11,6 +15,5 @@ const IconLink = (props: { ariaLabel: string; href: string; children: React.Reac
     </Link>
   );
 };
-
 
 export default IconLink;

@@ -17,6 +17,7 @@ const Intro = () => {
           <PiArrowUpRightBold className="inline text-center" />
         </Link>
       </div>
+      <div>Currently listening to: </div>
     </div>
   );
 };

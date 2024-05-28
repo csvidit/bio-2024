@@ -1,10 +1,14 @@
 import {
+  PiBrowser,
   PiBrowserDuotone,
   PiEnvelopeDuotone,
   PiGithubLogoDuotone,
   PiLinkedinLogoDuotone,
+  PiPaintBrushBroad,
   PiPaintBrushDuotone,
+  PiPen,
   PiPenDuotone,
+  PiSparkleDuotone,
   PiVideoCameraDuotone,
 } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -21,12 +25,12 @@ export const iconLinks = [
     ariaLabel: "GitHub",
   },
   {
-    href: "https://twitter.com/csvidit",
+    href: "https://x.com/csvidit",
     icon: <RiTwitterXLine />,
-    ariaLabel: "Twitter",
+    ariaLabel: "Twitter/x",
   },
   {
-    href: "https://cal.com/viditkhandelwal",
+    href: "https://calendly.com/viditkhandelwal",
     icon: <PiVideoCameraDuotone />,
     ariaLabel: "Calendly",
   },
@@ -39,28 +43,33 @@ export const iconLinks = [
 
 export const listLinks = [
   {
+    label: "Generative AI Prompts",
+    href: "https://v-k.pw/AmjL6YHPet",
+    icon: <PiSparkleDuotone />,
+  },
+  {
     label: "Engineering Blog",
     href: "https://v-k.pw/7pvHzhtOHy",
-    icon: <PiPenDuotone />,
+    icon: <PiPen />,
   },
   {
     label: "Essential UI libraries for React",
     href: "https://v-k.pw/1cTmyEzt76",
-    icon: <PiPenDuotone />,
+    icon: <PiPen />,
   },
   {
     label: "Snippetopia",
-    href: "https://snippetopia.xyz",
-    icon: <PiBrowserDuotone />,
+    href: "https://v-k.pw/pV4UD0i4zr",
+    icon: <PiBrowser />,
   },
   {
     label: "Lume Wallpapers",
-    href: "https://lume.csvid.it",
+    href: "https://v-k.pw/3RAiK36G9l",
     icon: <RxShadowNone />,
   },
   {
     label: "Vidit Khandelwal Studio",
-    href: "https://viditkhandelwal.com/studio",
-    icon: <PiPaintBrushDuotone />,
+    href: "https://v-k.pw/PXupov8gh7",
+    icon: <PiPaintBrushBroad />,
   },
 ];
