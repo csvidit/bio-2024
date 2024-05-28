@@ -2,6 +2,7 @@ import MainContainer from "@/components/MainContainer";
 import "./globals.css";
 import localFont from "next/font/local";
 import { DM_Mono } from "next/font/google";
+import Script from "next/script";
 
 export const metadata = {
   title: "Vidit Khandelwal Links",
@@ -60,7 +61,10 @@ const inter4 = localFont({
   display: "swap",
 });
 
-const dm_mono = DM_Mono({ subsets: ["latin-ext"], weight: ["300", "400", "500"]});
+const dm_mono = DM_Mono({
+  subsets: ["latin-ext"],
+  weight: ["300", "400", "500"],
+});
 
 export default function RootLayout({
   children,
@@ -69,6 +73,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "89d76c777558419b9a37bd3eea92d613"}'
+      ></Script>
       <body className={dm_mono.className}>
         <MainContainer>{children}</MainContainer>
       </body>
