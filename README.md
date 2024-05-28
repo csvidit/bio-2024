@@ -1,7 +1,5 @@
 # bio-2024
 
-**Current theme is on the mono-theme branch**
-
 A very simple link-in-bio website.
 
 ## Tech Stack
