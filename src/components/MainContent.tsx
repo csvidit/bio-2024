@@ -1,6 +1,6 @@
 const MainContent = (props: { children: React.ReactNode }) => {
   return (
-    <div className="p-8 flex flex-col gap-4 w-screen lg:w-4/12 h-full *:text-xs lg:*:text-sm">
+    <div className="flex h-full w-screen flex-col gap-4 p-8 *:text-xs lg:w-4/12 lg:*:text-sm">
       {props.children}
     </div>
   );

@@ -1,9 +1,9 @@
 import FeaturedLink from "./FeaturedLink";
 const Intro = () => {
   return (
-    <div className="flex flex-col gap-4 w-full h-fit col-span-4 bg-arapawa-950 *:text-arapawa-50 p-4 *:uppercase">
+    <div className="col-span-4 flex h-fit w-full flex-col gap-4 bg-arapawa-950 p-4 *:uppercase *:text-arapawa-50">
       <h1 className="">Vidit Khandelwal</h1>
-      <div className="flex flex-row gap-4 items-center *:shrink-0 flex-wrap">
+      <div className="flex flex-row flex-wrap items-center gap-4 *:shrink-0">
         <span>
           <span className="text-ice-300">S</span>oft
           <span className="text-ice-300">W</span>are{" "}

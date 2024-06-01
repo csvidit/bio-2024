@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="col-span-4 p-4 flex flex-row space-x-4 items-center row-span-1 bg-transparent text-gray-800 rounded-2xl">
+    <footer className="col-span-4 row-span-1 flex flex-row items-center space-x-4 rounded-2xl bg-transparent p-4 text-gray-800">
       <div className="w-fit">
         &copy; {new Date().getFullYear()} Vidit Khandelwal. All rights reserved.
         All wrongs reserved, too.

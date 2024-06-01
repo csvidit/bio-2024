@@ -9,11 +9,12 @@ const FeaturedLink = (props: {
   return (
     <Link
       aria-label={props.ariaLabel}
-      className="relative group inline-flex flex-row w-fit h-fit transition-all text-arapawa-50"
+      className="group relative inline-flex h-fit w-fit flex-row text-arapawa-50 transition-all"
       href={props.href}
     >
-      <span>{props.children}</span> <MdArrowOutward className="inline text-center text-ice-300 group-hover:text-ice-200 transition-all duration-200 ease-in-out" />
-      <span className="absolute bottom-0 left-0 bg-ice-300 w-[9px] h-[1px] group-hover:w-full group-hover:bg-ice-400 transition-all duration-200 ease-in-out"></span>
+      <span>{props.children}</span>{" "}
+      <MdArrowOutward className="inline text-center text-ice-300 transition-all duration-200 ease-in-out group-hover:text-ice-200" />
+      <span className="absolute bottom-0 left-0 h-[1px] w-1/3 bg-ice-300 transition-all duration-200 ease-in-out group-hover:w-full group-hover:bg-ice-400"></span>
     </Link>
   );
 };

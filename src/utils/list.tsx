@@ -8,8 +8,10 @@ import {
   PiPaintBrushDuotone,
   PiPen,
   PiPenDuotone,
+  PiSlideshowDuotone,
   PiSparkleDuotone,
   PiVideoCameraDuotone,
+  PiXLogoDuotone,
 } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { RxShadowNone } from "react-icons/rx";
@@ -26,8 +28,8 @@ export const iconLinks = [
   },
   {
     href: "https://x.com/csvidit",
-    icon: <RiTwitterXLine />,
-    ariaLabel: "Twitter/x",
+    icon: <PiXLogoDuotone />,
+    ariaLabel: "Twitter/X",
   },
   {
     href: "https://calendly.com/viditkhandelwal",
@@ -61,6 +63,11 @@ export const listLinks = [
     label: "Snippetopia",
     href: "https://v-k.pw/pV4UD0i4zr",
     icon: <PiBrowser />,
+  },
+  {
+    label: "Frontend Gallery",
+    href: "https://v-k.pw/YwAyjtfIMJ",
+    icon: <PiSlideshowDuotone />,
   },
   {
     label: "Lume Wallpapers",

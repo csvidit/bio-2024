@@ -8,7 +8,7 @@ const IconLink = (props: {
   return (
     <Link
       aria-label={props.ariaLabel}
-      className="flex flex-row w-fit h-fit bg-gray-200 p-2 text-gray-500 rounded-full shadow-inner shadow-gray-300 transition-all hover:shadow-gray-400 lg:text-xl"
+      className="flex h-fit w-fit flex-row rounded-full bg-gray-200 p-2 text-gray-500 shadow-inner shadow-gray-300 transition-all hover:shadow-gray-400 lg:text-xl"
       href={props.href}
     >
       {props.children}

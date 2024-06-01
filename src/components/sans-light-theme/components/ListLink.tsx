@@ -16,16 +16,16 @@ const ListLink = (props: {
       role="link"
       tabIndex={0}
       href={props.href}
-      className="w-full h-fit group p-4 col-span-4 flex flex-row justify-between items-center bg-gray-50 rounded-lg transition-all duration-200 ease-in-out hover:bg-gray-950 hover:scale-[101%] hover:ring hover:ring-gray-500 hover:shadow-lg hover:shadow-gray-500 focus:ring focus:ring-gray-500 focus:shadow-lg focus:shadow-gray-500"
+      className="group col-span-4 flex h-fit w-full flex-row items-center justify-between rounded-lg bg-gray-50 p-4 transition-all duration-200 ease-in-out hover:scale-[101%] hover:bg-gray-950 hover:shadow-lg hover:shadow-gray-500 hover:ring hover:ring-gray-500 focus:shadow-lg focus:shadow-gray-500 focus:ring focus:ring-gray-500"
     >
-      <div className="flex flex-row space-x-2 items-center *:group-hover:text-gray-50 *:group-focus:text-gray-50 *:transition-all *:duration-200 *:ease-in-out">
-        <div className="lg:text-lg text-gray-500 transition-all duration-200 ease-in-out">
+      <div className="flex flex-row items-center space-x-2 *:transition-all *:duration-200 *:ease-in-out *:group-hover:text-gray-50 *:group-focus:text-gray-50">
+        <div className="text-gray-500 transition-all duration-200 ease-in-out lg:text-lg">
           {props.icon}
         </div>
         <p className="lg:text-lg ">{props.children}</p>
       </div>
       <div>
-        <div className="lg:text-lg group-hover:rotate-45 transition-all duration-200 ease-in-out group-hover:text-gray-50">
+        <div className="transition-all duration-200 ease-in-out group-hover:rotate-45 group-hover:text-gray-50 lg:text-lg">
           <span className="flex">
             <PiArrowUpRightBold />
           </span>

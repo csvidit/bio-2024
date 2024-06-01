@@ -14,4 +14,4 @@ const SansLightTheme = () => {
   );
 };
 
-export default SansLightTheme
+export default SansLightTheme;
