@@ -1,7 +1,7 @@
-import MainContainer from "@/components/MainContainer";
+import MainContainer from "@/components/neon-dark-theme/containers/MainContainer";
 import "./globals.css";
 import localFont from "next/font/local";
-import { DM_Mono } from "next/font/google";
+import { Onest } from "next/font/google";
 import Script from "next/script";
 
 export const metadata = {
@@ -61,10 +61,15 @@ const inter4 = localFont({
   display: "swap",
 });
 
-const dm_mono = DM_Mono({
-  subsets: ["latin-ext"],
-  weight: ["300", "400", "500"],
-});
+// const dm_mono = DM_Mono({
+//   subsets: ["latin-ext"],
+//   weight: ["300", "400", "500"],
+// });
+
+const onest = Onest({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+})
 
 export default function RootLayout({
   children,
@@ -78,7 +83,7 @@ export default function RootLayout({
         src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "89d76c777558419b9a37bd3eea92d613"}'
       ></Script>
-      <body className={dm_mono.className}>
+      <body className={onest.className}>
         <MainContainer>{children}</MainContainer>
       </body>
     </html>

@@ -1,10 +1,5 @@
-import MainContent from "@/components/MainContent";
-import MonoDarkTheme from "@/components/mono-dark-theme/MonoDarkTheme";
+import NeonDarkTheme from "@/components/neon-dark-theme/NeonDarkTheme";
 
 export default function Home() {
-  return (
-    <MainContent>
-      <MonoDarkTheme/>
-    </MainContent>
-  );
+  return <NeonDarkTheme />;
 }

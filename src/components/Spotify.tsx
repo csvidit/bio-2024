@@ -1,4 +1,15 @@
-"use server";
+const getData = async () => {
+  const tokenResponse = await fetch(
+    `https://api.spotify.com/v1/me/player/currently-playing`,
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    },
+  );
+  const tokenData = await tokenResponse.json();
+  const accessToken = tokenData.access_token;
+};
 
 const Spotify = () => {
   return (

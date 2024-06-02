@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "iconsax-react": "^0.0.8",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
