@@ -1,5 +1,6 @@
 import {
   PiBrowsersFill,
+  PiDribbbleLogoFill,
   PiEnvelopeFill,
   PiGithubLogoFill,
   PiLinkedinLogoFill,
@@ -11,6 +12,7 @@ import {
   PiXLogoFill,
 } from "react-icons/pi";
 import { RxShadowNone } from "react-icons/rx";
+import LayersLogo from "./LayersLogo";
 export const iconLinks = [
   {
     href: "https://linkedin.com/in/viditkhandelwal",
@@ -36,6 +38,16 @@ export const iconLinks = [
     href: "mailto:vidit@viditkhandelwal.com",
     icon: <PiEnvelopeFill />,
     ariaLabel: "Email",
+  },
+  {
+    href: "https://dribbble.com/viditkhandelwal",
+    icon: <PiDribbbleLogoFill />,
+    ariaLabel: "Dribbble",
+  },
+  {
+    href: "https://layers.to/vk",
+    icon: <LayersLogo />,
+    ariaLabel: "Layers",
   },
 ];
 

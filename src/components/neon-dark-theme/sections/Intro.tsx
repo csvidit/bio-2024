@@ -45,11 +45,11 @@ const Intro = () => {
             <PiPresentationChartFill
               //   size={16}
               //   variant="Bulk"
-              className="inline text-neutral-600 transition-all duration-200 ease-in-out group-hover:-rotate-12 group-hover:scale-105 group-hover:transform group-hover:text-neutral-300"
+              className="inline text-neutral-600 transition-all duration-200 ease-in-out group-hover:-rotate-12 group-hover:scale-105 group-hover:transform group-hover:text-lime-400"
             />
             <span className="group-hover:text-citron-400 inline text-neutral-300 transition-all duration-200 ease-in-out">
               Portfolio{" "}
-              <PiArrowUpRightBold className="text-neutral-600 group-hover:text-neutral-300 transition-all duration-200 ease-in-out inline" />
+              <PiArrowUpRightBold className="text-lime-400 group-hover:text-lime-400 transition-all duration-200 ease-in-out inline group-hover:transform group-hover:scale-125" />
             </span>
           </Link>
         </div>

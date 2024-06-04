@@ -1,19 +1,12 @@
 import {
-  PiBrowser,
-  PiBrowserDuotone,
-  PiEnvelopeDuotone,
+  PiBrowser, PiEnvelopeDuotone,
   PiGithubLogoDuotone,
   PiLinkedinLogoDuotone,
-  PiPaintBrushBroad,
-  PiPaintBrushDuotone,
-  PiPen,
-  PiPenDuotone,
-  PiSlideshowDuotone,
+  PiPaintBrushBroad, PiPen, PiSlideshowDuotone,
   PiSparkleDuotone,
   PiVideoCameraDuotone,
-  PiXLogoDuotone,
+  PiXLogoDuotone
 } from "react-icons/pi";
-import { RiTwitterXLine } from "react-icons/ri";
 import { RxShadowNone } from "react-icons/rx";
 export const iconLinks = [
   {
