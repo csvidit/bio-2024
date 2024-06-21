@@ -71,7 +71,6 @@ const trackPageView = async (
     osVersion: os.version,
     device: device.type,
     referrer,
-    pageUrl: `/${pathname}`,
     queryParams,
     language,
     latitude,
