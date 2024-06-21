@@ -61,6 +61,16 @@ const trackPageView = async (
     console.error("Error fetching IP data:", error);
   }
 
+  let referrerType = "Unknown";
+  let referringURL = "";
+
+  if (referrer === "") {
+    referrerType = "Direct";
+  } else {
+    referrerType = "External";
+    referringURL = referrer;
+  }
+
   const data = {
     timestamp: new Date(),
     ip,
@@ -71,6 +81,9 @@ const trackPageView = async (
     osVersion: os.version,
     device: device.type,
     referrer,
+    referrerType,
+    referringURL,
+    pathname,
     queryParams,
     language,
     latitude,
