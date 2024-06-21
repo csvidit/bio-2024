@@ -1,8 +1,6 @@
 import MainContainer from "@/components/neon-dark-theme/containers/MainContainer";
 import "./globals.css";
-import localFont from "next/font/local";
 import { Onest } from "next/font/google";
-import Script from "next/script";
 
 export const metadata = {
   title: "Vidit Khandelwal Links",
@@ -47,29 +45,10 @@ export const metadata = {
   },
 };
 
-const inter4 = localFont({
-  src: [
-    {
-      path: "./InterVariable.woff2",
-      style: "normal",
-    },
-    {
-      path: "InterVariable-Italic.woff2",
-      style: "italic",
-    },
-  ],
-  display: "swap",
-});
-
-// const dm_mono = DM_Mono({
-//   subsets: ["latin-ext"],
-//   weight: ["300", "400", "500"],
-// });
-
 const onest = Onest({
   subsets: ["latin", "latin-ext"],
   display: "swap",
-})
+});
 
 export default function RootLayout({
   children,
@@ -78,11 +57,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script
-        defer
-        src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "89d76c777558419b9a37bd3eea92d613"}'
-      ></Script>
       <body className={onest.className}>
         <MainContainer>{children}</MainContainer>
       </body>
