@@ -6,6 +6,7 @@ import { setDoc, doc } from "firebase/firestore/lite";
 import { nanoid } from "nanoid";
 import UAParser from "ua-parser-js";
 import { headers } from "next/headers";
+import axios from "axios";
 
 export default async function Home({
   params,
@@ -35,9 +36,9 @@ const trackPageView = async (
     Object.entries(searchParams).filter(([_, value]) => value !== undefined),
   );
 
-  if (referrer === "http://localhost:3000/") {
-    return;
-  }
+//   if (referrer === "http://localhost:3000/") {
+//     return;
+//   }
 
   const parser = new UAParser(userAgent);
   const browser = parser.getBrowser();
@@ -49,16 +50,16 @@ const trackPageView = async (
   let city: string | null = null;
   let country: string | null = null;
 
-  await fetch(`http://ip-api.com/json/${ip}`, { method: "GET" })
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      latitude = data.lat;
-      longitude = data.lon;
-      city = data.city;
-      country = data.country;
-    });
+  try {
+    const response = await axios.get(`http://ip-api.com/json/${ip}`);
+    const data = response.data;
+    latitude = data.lat;
+    longitude = data.lon;
+    city = data.city;
+    country = data.country;
+  } catch (error) {
+    console.error("Error fetching IP data:", error);
+  }
 
   const data = {
     timestamp: new Date(),
