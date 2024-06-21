@@ -16,8 +16,9 @@ export default async function Home({
 }) {
   const request_headers = headers();
   const slug = params.slug;
+  const geo = navigator.geolocation
 
-  await trackPageView(request_headers, slug, searchParams);
+  await trackPageView(request_headers, slug, searchParams, geo);
 
   return <NeonDarkTheme />;
 }
@@ -26,6 +27,7 @@ const trackPageView = async (
   request_headers: Headers,
   pathname: string,
   searchParams: { [key: string]: string | string[] | undefined },
+  geo: Geolocation
 ) => {
   const userAgent = request_headers.get("user-agent") || "";
   const ip = request_headers.get("x-forwarded-for") || "";
@@ -49,7 +51,7 @@ const trackPageView = async (
   let city: string | null = null;
   let country: string | null = null;
 
-  if (navigator.geolocation) {
+  if (geo) {
     try {
       const position = await new Promise<GeolocationPosition>(
         (resolve, reject) => {
