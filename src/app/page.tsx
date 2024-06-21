@@ -6,6 +6,7 @@ import { setDoc, doc } from "firebase/firestore/lite";
 import { nanoid } from "nanoid";
 import UAParser from "ua-parser-js";
 import { headers } from "next/headers";
+import axios from "axios";
 
 export default async function Home({
   params,
@@ -49,28 +50,15 @@ const trackPageView = async (
   let city: string | null = null;
   let country: string | null = null;
 
-  if (navigator.geolocation) {
-    try {
-      const position = await new Promise<GeolocationPosition>(
-        (resolve, reject) => {
-          navigator.geolocation.getCurrentPosition(resolve, reject);
-        },
-      );
-
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
-
-      // Reverse geocode the coordinates to get the city and country
-      const response = await fetch(
-        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`,
-      );
-      const data = await response.json();
-
-      city = data.city;
-      country = data.countryName;
-    } catch (error) {
-      console.error("Error retrieving geolocation:", error);
-    }
+  try {
+    const response = await axios.get(`http://ip-api.com/json/${ip}`);
+    const data = response.data;
+    latitude = data.lat;
+    longitude = data.lon;
+    city = data.city;
+    country = data.country;
+  } catch (error) {
+    console.error("Error fetching IP data:", error);
   }
 
   const data = {
@@ -83,7 +71,6 @@ const trackPageView = async (
     osVersion: os.version,
     device: device.type,
     referrer,
-    pageUrl: `/${pathname}`,
     queryParams,
     language,
     latitude,

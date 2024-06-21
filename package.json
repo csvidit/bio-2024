@@ -11,6 +11,7 @@
   "dependencies": {
     "@spotify/web-api-ts-sdk": "^1.2.0",
     "@types/ua-parser-js": "^0.7.39",
+    "axios": "^1.7.2",
     "firebase": "^10.12.2",
     "iconsax-react": "^0.0.8",
     "nanoid": "^5.0.7",
