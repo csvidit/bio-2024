@@ -8,6 +8,7 @@ import {
 } from "react-icons/pi";
 import SectionContainer from "../containers/SectionContainer";
 import FeaturedLinks from "../links/FeaturedLinks";
+import styles from "../Pride.module.css"
 
 const Intro = () => {
   return (
@@ -15,10 +16,10 @@ const Intro = () => {
       <div className="flex flex-col items-start gap-4 lg:flex-row lg:gap-8">
         <div className="flex w-full flex-col text-sm text-neutral-400 lg:w-2/3">
           <div className="text-lg text-white lg:text-xl">Vidit Khandelwal</div>
-          <div className="text-neutral-500">
+          <span className="text-neutral-500">
             full stack engineer fueled by web dev, AI, and a splash of mobile
             dev.
-          </div>
+          </span>
         </div>
 
         <div className="flex w-full flex-col gap-1 text-sm lg:w-1/3">
