@@ -53,6 +53,11 @@ export const iconLinks = [
 
 export const listLinks = [
   {
+    label: "Some Design Learnings, Part 1",
+    href: "https://v-k.pw/ZeWcZg8rA2",
+    icon: <PiPenFill />,
+  },
+  {
     label: "Generative AI Prompts",
     href: "https://v-k.pw/AmjL6YHPet",
     icon: <PiSparkleFill />,
