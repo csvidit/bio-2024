@@ -55,7 +55,7 @@ const trackPageView = async (
     try {
       const position = await new Promise<GeolocationPosition>(
         (resolve, reject) => {
-          navigator.geolocation.getCurrentPosition(resolve, reject);
+          geo.getCurrentPosition(resolve, reject);
         },
       );
 
