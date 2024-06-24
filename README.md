@@ -5,6 +5,7 @@ A very simple link-in-bio website.
 ## Tech Stack
 * Next.js
 * Tailwind CSS
+* Trimr URL shortener service and analytics for link clicks
 * Firestore for custom analytics
 
 ## Analytics
