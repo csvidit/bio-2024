@@ -1,5 +1,6 @@
 import {
   PiBrowsersFill,
+  PiCodeFill,
   PiDribbbleLogoFill,
   PiEnvelopeFill,
   PiGithubLogoFill,
@@ -53,11 +54,15 @@ export const iconLinks = [
 
 export const listLinks = [
   {
+    label: "Brat link-in-bio template",
+    href: "https://v-k.pw/9gDlQTlqzp",
+    icon: <PiCodeFill />,
+  },
+  {
     label: "Recording my own web analytics in Next.js",
     href: "https://v-k.pw/fMu4Rns8cJ",
     icon: <PiPenFill />,
   },
-
   {
     label: "Some Design Learnings, Part 1",
     href: "https://v-k.pw/ZeWcZg8rA2",
