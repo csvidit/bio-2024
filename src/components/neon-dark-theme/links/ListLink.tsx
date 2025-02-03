@@ -14,7 +14,7 @@ const ListLinkSimple = (props: {
       target={props.href.startsWith("https") ? "_blank" : ""}
       aria-label={props.children}
       className={cn(
-        "${props.className group flex w-full rounded-md bg-neutral-900 px-[1px] pb-[2.4px] pt-[1px] font-normal transition-all duration-200 ease-in-out hover:bg-neutral-700 focus:bg-neutral-700 focus:outline-none focus:ring-0 focus:ring-offset-0 group-focus:bg-neutral-700 lg:gap-4 lg:rounded-lg",
+        "${props.className group flex w-full rounded-md bg-neutral-900 px-[1px] pb-[2.4px] pt-[1px] font-normal transition-all duration-200 ease-in-out hover:bg-neutral-700 focus:bg-neutral-700 focus:outline-hidden focus:ring-0 focus:ring-offset-0 group-focus:bg-neutral-700 lg:gap-4 lg:rounded-lg",
         props.className,
       )}
     >
