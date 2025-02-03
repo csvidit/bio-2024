@@ -1,3 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --color-blue-accent: #0000ff;
+
+  --color-orange-accent: #eb5e28;
+
+  --color-arapawa-50: #f3f5ff;
+  --color-arapawa-100: #e9ebfe;
+  --color-arapawa-200: #d5daff;
+  --color-arapawa-300: #b4bbfe;
+  --color-arapawa-400: #898ffc;
+  --color-arapawa-500: #5a5af8;
+  --color-arapawa-600: #4337f0;
+  --color-arapawa-700: #3525dc;
+  --color-arapawa-800: #2c1fb8;
+  --color-arapawa-900: #271b97;
+  --color-arapawa-950: #110d5b;
+
+  --color-ice-50: #f0fdfa;
+  --color-ice-100: #ccfbf2;
+  --color-ice-200: #a3f6e7;
+  --color-ice-300: #5fe9d5;
+  --color-ice-400: #2fd2c0;
+  --color-ice-500: #16b6a7;
+  --color-ice-600: #0e9389;
+  --color-ice-700: #10756e;
+  --color-ice-800: #125d59;
+  --color-ice-900: #144d4b;
+  --color-ice-950: #042f2f;
+
+  --color-blush-50: #fff1f4;
+  --color-blush-100: #fee5ea;
+  --color-blush-200: #fccfda;
+  --color-blush-300: #faa7bb;
+  --color-blush-400: #f66c91;
+  --color-blush-500: #ee4577;
+  --color-blush-600: #db2363;
+  --color-blush-700: #b81853;
+  --color-blush-800: #9a174b;
+  --color-blush-900: #841745;
+  --color-blush-950: #4a0722;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
