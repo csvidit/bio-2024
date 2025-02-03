@@ -1,6 +1,7 @@
 import MainContainer from "@/components/neon-dark-theme/containers/MainContainer";
 import "../globals.css"
 import { Onest, Inter } from "next/font/google";
+import { onest } from "@/utils/fonts";
 
 export const metadata = {
   title: "Dashboard / Vidit Khandelwal Links",
@@ -44,17 +45,6 @@ export const metadata = {
     type: "website",
   },
 };
-
-const onest = Onest({
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-  variable: "--true",
-});
 
 export default function RootLayout({
   children,
