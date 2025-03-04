@@ -16,7 +16,7 @@ const Intro = async () => {
   return (
     <SectionContainer>
       <div className="flex flex-col items-start gap-4 lg:flex-row lg:gap-8">
-        <div className="flex flex-col gap-4 lg:gap-8">
+        <div className="flex flex-col gap-4">
           <div className="flex w-full flex-col text-sm text-neutral-400 lg:w-2/3">
             <div className="text-lg text-white lg:text-xl">
               Vidit Khandelwal
