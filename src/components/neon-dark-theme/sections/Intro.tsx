@@ -16,7 +16,7 @@ const Intro = async () => {
   return (
     <SectionContainer>
       <div className="flex flex-col items-start gap-4 lg:flex-row lg:gap-8">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:gap-8">
           <div className="flex w-full flex-col text-sm text-neutral-400 lg:w-2/3">
             <div className="text-lg text-white lg:text-xl">
               Vidit Khandelwal
@@ -62,7 +62,7 @@ const Intro = async () => {
             className="group inline-flex items-center gap-1 transition-all duration-200 ease-in-out"
           >
             <PiPresentationChartFill className="inline text-neutral-600 transition-all duration-200 ease-in-out group-hover:-rotate-12 group-hover:scale-105 group-hover:transform group-hover:text-lime-400" />
-            <span className="group-hover:text-citron-400 inline text-neutral-300 transition-all duration-200 ease-in-out">
+            <span className="group-hover:text-lime-400 inline text-neutral-300 transition-all duration-200 ease-in-out">
               Portfolio{" "}
               <PiArrowUpRightBold className="inline text-lime-400 transition-all duration-200 ease-in-out group-hover:scale-125 group-hover:transform group-hover:text-lime-400" />
             </span>
