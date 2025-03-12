@@ -1,7 +1,7 @@
 import MainContainer from "@/components/neon-dark-theme/containers/MainContainer";
 import "../globals.css"
 import { Onest, Inter } from "next/font/google";
-import { onest } from "@/utils/fonts";
+import { gantari, onest } from "@/utils/fonts";
 
 export const metadata = {
   title: "Vidit Khandelwal Links",
@@ -54,7 +54,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={onest.className}>
+      <body className={gantari.className}>
         <MainContainer>{children}</MainContainer>
       </body>
     </html>
