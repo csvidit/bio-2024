@@ -53,10 +53,20 @@ const Intro = async () => {
             <PiMapPinFill className="inline text-neutral-600" />{" "}
             <span className="inline text-neutral-300">United States</span>
           </span>
-          <span className="inline-flex items-center gap-1">
+          {/* <span className="inline-flex items-center gap-1">
             <PiBriefcaseFill className="inline text-neutral-600" />{" "}
             <span className="inline text-neutral-300">Open To Work</span>
-          </span>
+          </span> */}
+           <Link
+            href="https://levangielaboratories.com"
+            className="group inline-flex items-center gap-1 transition-all duration-200 ease-in-out"
+          >
+            <PiBriefcaseFill className="inline text-neutral-600 transition-all duration-200 ease-in-out group-hover:-rotate-12 group-hover:scale-105 group-hover:transform group-hover:text-lime-400" />
+            <span className="group-hover:text-lime-400 inline text-neutral-300 transition-all duration-200 ease-in-out">
+              LLABS{" "}
+              <PiArrowUpRightBold className="inline text-lime-400 transition-all duration-200 ease-in-out group-hover:scale-125 group-hover:transform group-hover:text-lime-400" />
+            </span>
+          </Link>
           <Link
             href="https://viditkhandelwal.com"
             className="group inline-flex items-center gap-1 transition-all duration-200 ease-in-out"
