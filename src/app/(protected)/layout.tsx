@@ -1,11 +1,10 @@
 import MainContainer from "@/components/neon-dark-theme/containers/MainContainer";
-import "./globals.css";
-import localFont from "next/font/local";
-import { Onest } from "next/font/google";
-import Script from "next/script";
+import "../globals.css"
+import { Onest, Inter } from "next/font/google";
+import { onest } from "@/utils/fonts";
 
 export const metadata = {
-  title: "Vidit Khandelwal Links",
+  title: "Dashboard / Vidit Khandelwal Links",
   description:
     "Vidit Khandelwal's link in bio. He is a software engineer, web developer and UI engineer. Based in the United States",
   authors: [
@@ -47,42 +46,14 @@ export const metadata = {
   },
 };
 
-const inter4 = localFont({
-  src: [
-    {
-      path: "./InterVariable.woff2",
-      style: "normal",
-    },
-    {
-      path: "InterVariable-Italic.woff2",
-      style: "italic",
-    },
-  ],
-  display: "swap",
-});
-
-// const dm_mono = DM_Mono({
-//   subsets: ["latin-ext"],
-//   weight: ["300", "400", "500"],
-// });
-
-const onest = Onest({
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-})
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
-      <Script
-        defer
-        src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "89d76c777558419b9a37bd3eea92d613"}'
-      ></Script>
       <body className={onest.className}>
         <MainContainer>{children}</MainContainer>
       </body>

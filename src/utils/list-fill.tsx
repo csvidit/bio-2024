@@ -1,5 +1,6 @@
 import {
   PiBrowsersFill,
+  PiCodeFill,
   PiDribbbleLogoFill,
   PiEnvelopeFill,
   PiGithubLogoFill,
@@ -53,15 +54,26 @@ export const iconLinks = [
 
 export const listLinks = [
   {
-    label: "Generative AI Prompts",
+    label: "Brat link-in-bio template",
+    href: "https://v-k.pw/9gDlQTlqzp",
+    icon: <PiCodeFill />,
+  },
+  {
+    label: "Recording my own web analytics in Next.js",
+    href: "https://v-k.pw/fMu4Rns8cJ",
+    icon: <PiPenFill />,
+  },
+  {
+    label: "Some Design Learnings, Part 1",
     href: "https://v-k.pw/ZeWcZg8rA2",
     icon: <PiPenFill />,
   },
   {
-    label: "Generative AI Prompts",
-    href: "https://v-k.pw/AmjL6YHPet",
+    label: "Dial Detective",
+    href: "https://v-k.pw/MjhVEsbUYq",
     icon: <PiSparkleFill />,
   },
+  
   {
     label: "Engineering Blog",
     href: "https://v-k.pw/7pvHzhtOHy",
@@ -81,6 +93,11 @@ export const listLinks = [
     label: "Frontend Gallery",
     href: "https://v-k.pw/YwAyjtfIMJ",
     icon: <PiSlideshowFill />,
+  },
+  {
+    label: "Generative AI Prompts",
+    href: "https://v-k.pw/AmjL6YHPet",
+    icon: <PiSparkleFill />,
   },
   {
     label: "Lume Wallpapers",

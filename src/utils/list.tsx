@@ -38,7 +38,13 @@ export const iconLinks = [
 
 export const listLinks = [
   {
-    label: "Generative AI Prompts",
+    label: "Recording my own web analytics in Next.js",
+    href: "https://v-k.pw/fMu4Rns8cJ",
+    icon: <PiPen />,
+  },
+
+  {
+    label: "Some Design Learnings, Part 1",
     href: "https://v-k.pw/ZeWcZg8rA2",
     icon: <PiPen />,
   },
