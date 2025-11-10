@@ -88,6 +88,42 @@ No test suite currently configured. Add tests before significant refactoring.
 - No third-party marketing analytics (privacy-focused)
 - IP addresses used only for geolocation
 
+**Analytics Schema:**
+
+Collection: `pageViews`
+Document ID: Auto-generated using `nanoid()`
+
+```typescript
+{
+  timestamp: Date,              // When the page was viewed
+  ip: string,                   // Visitor's IP (from x-forwarded-for header)
+  userAgent: string,            // Full user agent string
+  browser: string,              // Browser name (parsed via ua-parser-js)
+  browserVersion: string,       // Browser version
+  os: string,                   // Operating system name
+  osVersion: string,            // OS version
+  device: string | undefined,   // Device type (mobile, tablet, etc.)
+  referrer: string,             // HTTP referer header
+  referrerType: string,         // "Direct", "External", or "Unknown"
+  referringURL: string,         // Full referring URL (if external)
+  pathname: string,             // Page path visited
+  queryParams: object,          // URL query parameters as key-value pairs
+  language: string,             // Accept-Language header
+  latitude: number | null,      // Geolocation lat (from ip-api.com)
+  longitude: number | null,     // Geolocation lon (from ip-api.com)
+  city: string | null,          // City name (from ip-api.com)
+  country: string | null,       // Country name (from ip-api.com)
+}
+```
+
+**Analytics Implementation Notes:**
+- Tracking occurs server-side in `src/app/(public)/page.tsx`
+- Uses `ua-parser-js` for parsing user agent strings
+- Geolocation via ip-api.com API (may fail, fields will be null)
+- Localhost referrers are ignored to prevent dev environment tracking
+- Undefined values are filtered before storing to Firestore
+- Uses Firestore Lite SDK (not full Firebase SDK)
+
 **Environment Variables:**
 - Firebase credentials required for analytics
 - Kinde auth credentials required for protected routes
