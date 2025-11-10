@@ -35,7 +35,7 @@ const trackPageView = async (
   const queryParams = Object.fromEntries(
     Object.entries(searchParams).filter(([_, value]) => value !== undefined),
   );
-
+  
   if (referrer === "http://localhost:3000/") {
     return;
   }
