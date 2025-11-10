@@ -1,12 +1,27 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { useState } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 
 interface GeographicChartProps {
   data: Array<{ country: string; count: number }>;
 }
 
 const GeographicChart = ({ data }: GeographicChartProps) => {
-  const chartData = data.slice(0, 10).map(item => ({
-    country: item.country.length > 15 ? item.country.substring(0, 12) + "..." : item.country,
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const chartData = data.slice(0, 10).map((item) => ({
+    country:
+      item.country.length > 15
+        ? item.country.substring(0, 12) + "..."
+        : item.country,
     fullCountry: item.country,
     visitors: item.count,
   }));
@@ -14,9 +29,11 @@ const GeographicChart = ({ data }: GeographicChartProps) => {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload[0]) {
       return (
-        <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-3 shadow-lg">
-          <p className="font-medium text-neutral-100">{payload[0].payload.fullCountry}</p>
-          <p className="text-sm text-neutral-400">
+        <div className="rounded-lg border border-neutral-900 bg-neutral-950 p-3 shadow-sm">
+          <p className="mb-1 text-xs font-light text-neutral-100">
+            {payload[0].payload.fullCountry}
+          </p>
+          <p className="text-sm font-light text-lime-500">
             {payload[0].value} visitors
           </p>
         </div>
@@ -27,48 +44,43 @@ const GeographicChart = ({ data }: GeographicChartProps) => {
 
   if (!data || data.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[300px] text-neutral-500">
+      <div className="flex h-[250px] items-center justify-center text-neutral-700">
         No geographic data available
       </div>
     );
   }
 
   return (
-    <div className="h-[300px] w-full">
+    <div className="h-[250px] w-full">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={chartData}
           margin={{
-            top: 5,
-            right: 30,
-            left: 20,
+            top: 10,
+            right: 20,
+            left: 0,
             bottom: 60,
           }}
         >
           <CartesianGrid
-            strokeDasharray="3 3"
-            stroke="#374151"
+            strokeDasharray="1 1"
+            stroke="#1F2937"
             strokeOpacity={0.3}
           />
           <XAxis
             dataKey="country"
             angle={-45}
             textAnchor="end"
-            height={100}
-            tick={{ fontSize: 12, fill: "#9CA3AF" }}
-            axisLine={{ stroke: "#374151" }}
+            height={80}
+            tick={{ fontSize: 10, fill: "#6B7280" }}
+            axisLine={{ stroke: "#1F2937" }}
           />
           <YAxis
-            tick={{ fontSize: 12, fill: "#9CA3AF" }}
-            axisLine={{ stroke: "#374151" }}
+            tick={{ fontSize: 10, fill: "#6B7280" }}
+            axisLine={{ stroke: "#1F2937" }}
           />
-          <Tooltip content={<CustomTooltip />} />
-          <Bar
-            dataKey="visitors"
-            fill="#10B981"
-            radius={[4, 4, 0, 0]}
-            className="fill-green-500"
-          />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: "#262626" }} />
+          <Bar dataKey="visitors" fill="#84CC16" radius={[2, 2, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

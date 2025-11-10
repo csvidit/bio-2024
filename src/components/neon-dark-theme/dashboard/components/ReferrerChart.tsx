@@ -29,9 +29,9 @@ const ReferrerChart = ({ data }: ReferrerChartProps) => {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload[0]) {
       return (
-        <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-3 shadow-lg">
-          <p className="font-medium text-neutral-100">{payload[0].payload.type}</p>
-          <p className="text-sm text-neutral-400">
+        <div className="bg-neutral-950 border border-neutral-900 rounded-lg p-3 shadow-sm">
+          <p className="text-xs font-light text-neutral-100 mb-1">{payload[0].payload.type}</p>
+          <p className="text-sm font-light text-lime-500">
             {payload[0].value} visitors ({payload[0].payload.percentage}%)
           </p>
         </div>
@@ -40,62 +40,46 @@ const ReferrerChart = ({ data }: ReferrerChartProps) => {
     return null;
   };
 
-  const CustomLabel = ({ x, y, width, value }: any) => {
-    return (
-      <text
-        x={x + width / 2}
-        y={y - 5}
-        fill="#F3F4F6"
-        textAnchor="middle"
-        fontSize={12}
-        fontWeight="bold"
-      >
-        {value}
-      </text>
-    );
-  };
-
   if (!data || data.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[300px] text-neutral-500">
+      <div className="flex items-center justify-center h-[200px] text-neutral-700">
         No referrer data available
       </div>
     );
   }
 
   return (
-    <div className="h-[300px] w-full">
+    <div className="h-[200px] w-full">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={chartData}
           margin={{
-            top: 20,
-            right: 30,
-            left: 20,
-            bottom: 5,
+            top: 10,
+            right: 20,
+            left: 0,
+            bottom: 40,
           }}
         >
           <CartesianGrid
-            strokeDasharray="3 3"
-            stroke="#374151"
+            strokeDasharray="1 1"
+            stroke="#1F2937"
             strokeOpacity={0.3}
           />
           <XAxis
             dataKey="type"
-            tick={{ fontSize: 12, fill: "#9CA3AF" }}
-            axisLine={{ stroke: "#374151" }}
+            tick={{ fontSize: 10, fill: "#6B7280" }}
+            axisLine={{ stroke: "#1F2937" }}
           />
           <YAxis
-            tick={{ fontSize: 12, fill: "#9CA3AF" }}
-            axisLine={{ stroke: "#374151" }}
+            tick={{ fontSize: 10, fill: "#6B7280" }}
+            axisLine={{ stroke: "#1F2937" }}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: "#262626" }} />
           <Bar
             dataKey="count"
-            fill="#3B82F6"
-            radius={[4, 4, 0, 0]}
-            label={CustomLabel}
-            className="fill-blue-500"
+            fill="#84CC16"
+            radius={[2, 2, 0, 0]}
+            className="hover:fill-opacity-80"
           />
         </BarChart>
       </ResponsiveContainer>
