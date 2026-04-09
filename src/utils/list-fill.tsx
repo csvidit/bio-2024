@@ -5,6 +5,7 @@ import {
   PiEnvelopeFill,
   PiGithubLogoFill,
   PiLinkedinLogoFill,
+  PiOfficeChairFill,
   PiPaintBrushFill,
   PiPenFill,
   PiSlideshowFill,
@@ -53,6 +54,11 @@ export const iconLinks = [
 ];
 
 export const listLinks = [
+   {
+    label: "ETHIQUE Case Management System",
+    href: "https://v-k.pw/I4iRwwAX8z",
+    icon: <PiOfficeChairFill/>
+  },
   {
     label: "Brat link-in-bio template",
     href: "https://v-k.pw/9gDlQTlqzp",
