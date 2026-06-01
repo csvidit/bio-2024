@@ -7,6 +7,7 @@ import {
   PiLinkedinLogoFill,
   PiOfficeChairFill,
   PiPaintBrushFill,
+  PiPaperPlaneTiltFill,
   PiPenFill,
   PiSlideshowFill,
   PiSparkleFill,
@@ -54,10 +55,15 @@ export const iconLinks = [
 ];
 
 export const listLinks = [
-   {
+  {
+    label: "Sendmaxx - Ridiculously simple cold outbound",
+    href: "https://v-k.pw/kRzHeu5QwD",
+    icon: <PiPaperPlaneTiltFill />,
+  },
+  {
     label: "ETHIQUE Case Management System",
     href: "https://v-k.pw/I4iRwwAX8z",
-    icon: <PiOfficeChairFill/>
+    icon: <PiOfficeChairFill />,
   },
   {
     label: "Brat link-in-bio template",
@@ -79,7 +85,7 @@ export const listLinks = [
     href: "https://v-k.pw/MjhVEsbUYq",
     icon: <PiSparkleFill />,
   },
-  
+
   {
     label: "Engineering Blog",
     href: "https://v-k.pw/7pvHzhtOHy",
