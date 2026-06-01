@@ -2,7 +2,7 @@ import {
   PiBrowser, PiBuildingOffice, PiEnvelopeDuotone,
   PiGithubLogoDuotone,
   PiLinkedinLogoDuotone,
-  PiPaintBrushBroad, PiPen, PiSlideshowDuotone,
+  PiPaintBrushBroad, PiPaperPlaneTilt, PiPen, PiSlideshowDuotone,
   PiSparkleDuotone,
   PiVideoCameraDuotone,
   PiXLogoDuotone
@@ -38,7 +38,12 @@ export const iconLinks = [
 
 export const listLinks = [
   {
-    label: "Ethique AI",
+    label: "Sendmaxx - Ridiculously simple cold outbound",
+    href: "https://v-k.pw/kRzHeu5QwD",
+    icon: <PiPaperPlaneTilt />,
+  },
+  {
+    label: "ETHIQUE Case Management System",
     href: "https://v-k.pw/lHQ9qzHPFU",
     icon: <PiBuildingOffice />,
   },
