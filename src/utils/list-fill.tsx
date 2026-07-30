@@ -5,6 +5,7 @@ import {
   PiEnvelopeFill,
   PiGithubLogoFill,
   PiLinkedinLogoFill,
+  PiNotePencilFill,
   PiOfficeChairFill,
   PiPaintBrushFill,
   PiPaperPlaneTiltFill,
@@ -55,6 +56,11 @@ export const iconLinks = [
 ];
 
 export const listLinks = [
+  {
+      label: "BitBrief - Free and OSS for meeting notes",
+      href: "https://v-k.pw/6b9JlgPYpf",
+      icon: <PiNotePencilFill />,
+    },
   {
     label: "Sendmaxx - Ridiculously simple cold outbound",
     href: "https://v-k.pw/kRzHeu5QwD",
